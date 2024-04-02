@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Результат опроса</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Результат опроса</h1>
+        <div id="resultContainer">
+          <h2 id="resultText"></h2>
+          <img id="resultImage" src="" alt="Result Image">
+        </div>
+      </div>
+
+      <style>
+        #resultImage {
+          max-width: 100%;
+          height: auto;
+          display: none; /* Изначально скрываем изображение */
+          margin-top: 20px;
+          align-items: center;
+          margin: 0 auto;
+        }
+      </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Получаем ответы пользователя из sessionStorage
+      const answers = [];
+      for (let i = 1; i <= 10; i++) {
+        const questionKey = 'question' + i;
+        const answer = sessionStorage.getItem(questionKey);
+        answers.push(answer);
+      }
+
+      // Вычисляем результат
+      const yesCount = answers.filter(answer => answer === 'yes').length;
+
+      let resultMessage = '';
+      let resultImageSrc = '';
+      if (yesCount === 10){
+        resultMessage = "Пидора ответ !";
+        resultImageSrc = "/img/images5.jpeg";
+      }
+      else if (yesCount >= 8)  {
+        resultMessage = "Ебейшее настроение";
+        resultImageSrc = "/img/images.jpeg";
+      } else if (yesCount >= 5) {
+        resultMessage = "Тут уже опасян нахуй";
+        resultImageSrc = "/img/images2.jpg";
+      } else{
+        resultMessage = "Угроза жизни окружающих";
+        resultImageSrc = "/img/images3.jpg";
+      }
+
+      // Выводим результат на странице
+      const resultText = document.getElementById('resultText');
+      resultText.textContent = resultMessage;
+
+      const resultImage = document.getElementById('resultImage');
+      resultImage.src = resultImageSrc;
+      resultImage.style.display = 'block'; 
+    });
+  </script>
+</body>
+</html>

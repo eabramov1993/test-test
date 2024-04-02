@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Опросник</title>
+  <!-- Подключение стилей из внешнего файла -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Опросник</h1>
+    <form id="quizForm" action="result.html" method="get">
+      <div >
+        <label for="question1">1. Имеется ли желание уебать кого то с ноги ? </label><br>
+        <input type="radio" id="question1_yes" name="question1" value="yes">
+        <label class="da-net" for="question1_yes">НЕТ</label>
+        <input type="radio" id="question1_no" name="question1" value="no">
+        <label class="da-net" for="question1_no">ДА</label>
+      </div>
+      <!-- Добавьте аналогичные блоки для остальных вопросов -->
+      <hr>
+
+      <div>
+        <label for="question2">2. Неконтролируемый приступ слезности? </label><br>
+        <input type="radio" id="question2_yes" name="question2" value="yes">
+        <label class="da-net" for="question2_yes">НЕТ</label>
+        <input type="radio" id="question2_no" name="question2" value="no">
+        <label class="da-net" for="question2_no">ДА</label>
+      </div>
+      <!-- Добавьте аналогичные блоки для остальных вопросов -->
+      <hr>
+
+      <div>
+        <label for="question3">3. Ебейшее желание вздернуться ? (если да обратись к психиатру нахуй терпила!!)</label><br>
+        <input type="radio" id="question3_yes" name="question3" value="yes">
+        <label class="da-net" for="question3_yes">НЕТ</label>
+        <input type="radio" id="question3_no" name="question3" value="no">
+        <label class="da-net" for="question_no">ДА</label>
+      </div>
+      <!-- Добавьте аналогичные блоки для остальных вопросов -->
+      <hr>
+
+      <div>
+        <label for="question4">4. Лютейший жор на фане стресса ?</label><br>
+        <input type="radio" id="question4_yes" name="question4" value="yes">
+        <label class="da-net" for="question4_yes">НЕТ</label>
+        <input type="radio" id="question4_no" name="question4" value="no">
+        <label class="da-net" for="question4_no">ДА</label>
+      </div>
+      <!-- Добавьте аналогичные блоки для остальных вопросов -->
+      <hr>
+
+      <div>
+        <label for="question5">5. Любое высказывание в твой адрес вызывает неимоверное желание послать на хуй ?</label><br>
+        <input type="radio" id="question5_yes" name="question5" value="yes">
+        <label class="da-net" for="question5_yes">НЕТ</label>
+        <input type="radio" id="question5_no" name="question5" value="no">
+        <label class="da-net" for="question5_no">ДА</label>
+      </div>
+      <!-- Добавьте аналогичные блоки для остальных вопросов -->
+      <hr>
+
+      <div>
+        <label for="question6">6. Отсутствует желание общаться с кем либо ?</label><br>
+        <input type="radio" id="question6_yes" name="question6" value="yes">
+        <label class="da-net" for="question6_yes">НЕТ</label>
+        <input type="radio" id="question6_no" name="question6" value="no">
+        <label class="da-net" for="question6_no">ДА</label>
+      </div>
+      <!-- Добавьте аналогичные блоки для остальных вопросов -->
+      <hr>
+
+      <div>
+        <label for="question7">7. Желание сидеть дома и нихуя не делать ?</label><br>
+        <input type="radio" id="question7_yes" name="question7" value="yes">
+        <label class="da-net" for="question7_yes">НЕТ</label>
+        <input type="radio" id="question7_no" name="question7" value="no">
+        <label class="da-net" for="question7_no">ДА</label>
+      </div>
+      <!-- Добавьте аналогичные блоки для остальных вопросов -->
+      <hr>
+
+      <div>
+        <label for="question8">8. Вот бы поспать ебать часов 100000000 </label><br>
+        <input type="radio" id="question8_yes" name="question8" value="yes">
+        <label class="da-net" for="question8_yes">НЕТ</label>
+        <input type="radio" id="question8_no" name="question8" value="no">
+        <label class="da-net" for="question8_no">ДА</label>
+      </div>
+      <!-- Добавьте аналогичные блоки для остальных вопросов -->
+      <hr>
+
+      <div>
+        <label for="question9">9. Головная боль на фоне сильного разгона хуйни ?</label><br>
+        <input type="radio" id="question9_yes" name="question9" value="yes">
+        <label class="da-net" for="question9_yes">НЕТ</label>
+        <input type="radio" id="question9_no" name="question9" value="no">
+        <label class="da-net" for="question9_no">ДА</label>
+      </div>
+      <!-- Добавьте аналогичные блоки для остальных вопросов -->
+      <hr>
+
+      <div>
+        <label for="question10">10. Орисутствие демотивации как осова жизни ? </label><br>
+        <input type="radio" id="question10_yes" name="question10" value="yes">
+        <label class="da-net" for="question10_yes">НЕТ</label>
+        <input type="radio" id="question10_no" name="question10" value="no">
+        <label class="da-net" for="question10_no">ДА</label>
+      </div>
+      <!-- Добавьте аналогичные блоки для остальных вопросов -->
+      <hr>
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+
+  <script>
+    // Обработчик формы опросника
+    const quizForm = document.getElementById('quizForm');
+    quizForm.addEventListener('submit', function(event) {
+      // Отменяем отправку формы, чтобы не перейти на другую страницу
+      event.preventDefault();
+
+      // Сохраняем выбор пользователя в sessionStorage при отправке формы
+      const radios = document.querySelectorAll('input[type="radio"]');
+      radios.forEach(radio => {
+        if (radio.checked) {
+          sessionStorage.setItem(radio.name, radio.value);
+        }
+      });
+
+      // Перенаправляем на страницу с результатами
+      window.location.href = 'result.html';
+    });
+  </script>
+</body>
+</html>
